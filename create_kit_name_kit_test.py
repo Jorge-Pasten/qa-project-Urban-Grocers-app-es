@@ -31,6 +31,7 @@ def positive_assert(name):
     kit_response = sender_stand_request.post_new_client_kit(headers_kit1,body_kit1)
     # Comprueba si el código de estado es 201
     assert kit_response.status_code == 201
+    assert kit_response.json()["name"] == name
 
 
 def negative_assert_code_400(name):
