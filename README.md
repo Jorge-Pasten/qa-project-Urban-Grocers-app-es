@@ -26,3 +26,25 @@ El proyecto realiza pruebas positivas y negativas en la aplicación urban grocer
 | 7    | **Se permiten números:** kit_body = { "name": "123" }	                                    |Código de respuesta: 201 El campo "name" del cuerpo de la respuesta coincide con el campo "name" del cuerpo de la solicitud|
 | 8    | **El parámetro no se pasa en la solicitud:** kit_body = { }	                              |Código de respuesta: 400|
 | 9    | **Se ha pasado un tipo de parámetro diferente (número):** kit_body = { "name": 123 }	     |Código de respuesta: 400|
+
+---
+### Archivos del Proyecto
+
+configuration.py: Este archivo contiene el URL y las rutas de solicitud.
+data.py: Este archivo contiene los cuerpos necesarios para las solicitudes.
+sender_stand_request.py: Este archivo contiene todas las solicitudes para POST para crear una cuenta de usuario y crear un kit.
+create_kit_name_kit_test.py: Este archivo contiene todos los tests.
+README.md: Este archivo incluye una descripción del proyecto.
+.gitignore: Incluye los archivos que no se deben subir a los repositorios.
+
+
+### Recursos
+
+**Paquetes instalados**
+- requests
+- pytest
+
+**Documentación**
+- URL + /docs/
+  - "Main.User" → "Creación de cuenta”
+  - "Main.Kits" → "Crear un kit”
