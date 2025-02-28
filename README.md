@@ -1,8 +1,8 @@
-# Urban Grosers - Pruebas Automatizadas con Pytest
+# Urban Grocers - Pruebas Automatizadas con Pytest
 
 
 ## Descripción
-Este proyecto forma parte del séptimo sprint en el proceso de QA Engineer de TripleTen para la aplicación de pedidos de comida Urban Grosers. La tarea principal consiste en automatizar las pruebas de la funcionalidad de creación de kits de productos mediante pytest. Se implementaron tanto pruebas positivas como negativas basadas en una lista de comprobación previamente definida.
+Este proyecto forma parte del séptimo sprint en el proceso de QA Engineer de TripleTen para la aplicación de pedidos Urban Grocers. La tarea principal consiste en automatizar las pruebas de la funcionalidad de creación de kits de productos mediante pytest. Se implementaron tanto pruebas positivas como negativas basadas en una lista de comprobación previamente definida.
 
 El objetivo es garantizar que el campo name en la solicitud de creación de un kit de productos funcione correctamente bajo diferentes escenarios, asegurando que la API maneje adecuadamente los valores válidos e inválidos.
 
@@ -14,7 +14,7 @@ El objetivo es garantizar que el campo name en la solicitud de creación de un k
 
 ## Estructura del Proyecto
 ```
-qa-project-Urban-Grosers-app-es/
+qa-project-Urban-Grocers-app-es/
 │-- configuration.py         # Configuración de la URL del servidor y rutas de solicitud.
 │-- data.py                  # Datos de prueba reutilizables
 │-- sender_stand_request.py   # Funciones para enviar solicitudes a la API
@@ -43,8 +43,8 @@ Los casos de prueba se basan en la siguiente lista de comprobación:
 ## Instalación y Ejecución de las Pruebas
 ### 1️⃣ Clonar el repositorio
 ```bash
-git clone git@github.com:tu_usuario/qa-project-Urban-Grosers-app-es.git
-cd qa-project-Urban-Grosers-app-es
+git clone git@github.com:tu_usuario/qa-project-Urban-Grocers-es.git
+cd qa-project-Urban-Grocers-es
 ```
 
 ### 2️⃣ Instalar dependencias
@@ -56,7 +56,7 @@ pip install -r requirements.txt
 ```
 
 ### 3️⃣ Configurar la URL del servidor
-Actualizar el archivo `configuration.py` con la URL obtenida al iniciar el servidor de Urban Grosers.
+Actualizar el archivo `configuration.py` con la URL obtenida al iniciar el servidor de Urban Grocers.
 
 ### 4️⃣ Ejecutar pruebas con pytest
 ```bash
