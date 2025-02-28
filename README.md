@@ -1,19 +1,31 @@
-# Proyecto Urban Grocers
+# Urban Grosers - Pruebas Automatizadas con Pytest
 
 
 ## Descripción
-El proyecto realiza pruebas positivas y negativas en la aplicación urban grocers especificamente en el campo "name" cuando se crea un kit de productos.
+Este proyecto forma parte del séptimo sprint en el proceso de QA Engineer de TripleTen para la aplicación de pedidos de comida Urban Grosers. La tarea principal consiste en automatizar las pruebas de la funcionalidad de creación de kits de productos mediante pytest. Se implementaron tanto pruebas positivas como negativas basadas en una lista de comprobación previamente definida.
 
----
+El objetivo es garantizar que el campo name en la solicitud de creación de un kit de productos funcione correctamente bajo diferentes escenarios, asegurando que la API maneje adecuadamente los valores válidos e inválidos.
 
-## Instrucciones
+## Tecnologías Utilizadas
+- Python (para la automatización de pruebas)
+- Pytest (framework de pruebas)
+- Requests (para el envío de solicitudes HTTP)
+- Git y GitHub (para control de versiones y almacenamiento del código)
 
-- Necesitas tener instalados los paquetes pytest y request para ejecutar las pruebas.
-- Ejecuta todas las pruebas con el comando pytest.
+## Estructura del Proyecto
+```
+qa-project-Urban-Grosers-app-es/
+│-- configuration.py         # Configuración de la URL del servidor y rutas de solicitud.
+│-- data.py                  # Datos de prueba reutilizables
+│-- sender_stand_request.py   # Funciones para enviar solicitudes a la API
+│-- create_kit_name_test.py   # Archivo con las pruebas automatizadas
+│-- .gitignore                # Archivos y carpetas a ignorar en Git
+│-- README.md                 # Documentación del proyecto
+```
 
----
 
-### Lista de comprobación
+## Casos de Prueba Implementados
+Los casos de prueba se basan en la siguiente lista de comprobación:
 
 | №    | Description                                                                               | ER: | 
 |------|-------------------------------------------------------------------------------------------|-| 
@@ -27,24 +39,29 @@ El proyecto realiza pruebas positivas y negativas en la aplicación urban grocer
 | 8    | **El parámetro no se pasa en la solicitud:** kit_body = { }	                              |Código de respuesta: 400|
 | 9    | **Se ha pasado un tipo de parámetro diferente (número):** kit_body = { "name": 123 }	     |Código de respuesta: 400|
 
----
-### Archivos del Proyecto
 
-- **configuration.py:** Este archivo contiene el URL y las rutas de solicitud. 
-- **data.py:** Este archivo contiene los cuerpos necesarios para las solicitudes. 
-- **sender_stand_request.py:** Este archivo contiene todas las solicitudes para POST para crear una cuenta de usuario y crear un kit.
-- **create_kit_name_kit_test.py:** Este archivo contiene todos los tests.
-- **README.md:** Este archivo incluye una descripción del proyecto. 
-- **.gitignore:** Incluye los archivos que no se deben subir a los repositorios.
+## Instalación y Ejecución de las Pruebas
+### 1️⃣ Clonar el repositorio
+```bash
+git clone git@github.com:tu_usuario/qa-project-Urban-Grosers-app-es.git
+cd qa-project-Urban-Grosers-app-es
+```
 
+### 2️⃣ Instalar dependencias
+Se recomienda utilizar un entorno virtual:
+```bash
+python -m venv env
+source env/bin/activate  # En Windows: env\Scriptsctivate
+pip install -r requirements.txt
+```
 
-### Recursos
+### 3️⃣ Configurar la URL del servidor
+Actualizar el archivo `configuration.py` con la URL obtenida al iniciar el servidor de Urban Grosers.
 
-**Paquetes instalados**
-- requests
-- pytest
+### 4️⃣ Ejecutar pruebas con pytest
+```bash
+pytest -v
+```
 
-**Documentación**
-- URL + /docs/
-  - "Main.User" → "Creación de cuenta”
-  - "Main.Kits" → "Crear un kit”
+## Autor
+Proyecto realizado por **Jorge Luis Pasten Peña** como parte del proceso de aprendizaje en QA Engineer de TripleTen.
